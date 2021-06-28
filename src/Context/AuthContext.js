@@ -1,7 +1,6 @@
-import react from "React";
+import React from "react";
 import axios from "axios";
-import { config } from "../Helpers/authimport";
-import cookies from "js-cookies";
+import { config } from "../helpers/auth";
 import Cookies from "js-cookie";
 
 export const AuthContext = React.createContext();
