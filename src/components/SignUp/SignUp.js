@@ -53,7 +53,7 @@ const SignUp = () => {
         <input name="location" value={state.location} onChange={handleChange} />
         <br />
         <p>Language</p>
-        <input name="language" value={state.language} onChange={handleChange} />
+        <input name="language" value={state.primary_language} onChange={handleChange} />
         <br />
         <p>Skills</p>
         <input name="skills" value={state.skills} onChange={handleChange} />
@@ -65,10 +65,10 @@ const SignUp = () => {
           onChange={handleChange}
         />
         <br />
-        <p>Looking For</p>
+        <p>About Me</p>
         <input
-          name="lokkingfor"
-          value={state.lokkingfor}
+          name="aboutme"
+          value={state.aboutme}
           onChange={handleChange}
         />
         <br />
