@@ -18,7 +18,7 @@ const SignUp = () => {
   };
 
   return (
-    <div>
+    <div className="signup-wrapper">
       <p>Sign Up</p>
       <form onSubmit={handleSubmit}>
         <p>Image</p>
@@ -26,6 +26,7 @@ const SignUp = () => {
           name="profile_image"
           value={state.profile_image}
           onChange={handleChange}
+          className="profile-image-input"
         />
         <br />
         <p>Email</p>
@@ -65,15 +66,15 @@ const SignUp = () => {
           onChange={handleChange}
         />
         <br />
-        <p>Looking For</p>
+        <p>About Me</p>
         <input
-          name="lokkingfor"
-          value={state.lokkingfor}
+          name="aboutme"
+          value={state.aboutme}
           onChange={handleChange}
         />
         <br />
 
-        <button type="submit">Sign Up</button>
+        <button type="submit" >Sign Up</button>
       </form>
     </div>
   );

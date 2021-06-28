@@ -1,16 +1,19 @@
 .login-logo{
-    width: 350px;
-    height: 350px;
+    width: 150px;
+    height: 150px;
     margin: auto;
     margin-top: 13vh;
     display: block;
 }
 .login-button{
-    display: block;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: auto;
-    border-radius: 50px;
-    width: 183px;
-    height: 76px;
+    border-radius: 10px;
+    width: 153px;
+    height: 56px;
     background: #00b16d;
     text-decoration: none;
     color: white;
@@ -18,10 +21,32 @@
     line-height: 76px;
     font-size: 25px;
     font-weight: 700;
-    margin-top: 110px;
-    
+    margin-top: 110px;    
+}
+
+.login-h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+.signup-button{
+    color:#00b16d;
+}
+
+.email-input-form{
+border: 1px solid #000000;
+border-top: none;
+border-left: none;
+border-right: none;
 
 }
-.login-h1{
+.password-input-form{
+border: 1px solid #000000;
+border-top: none;
+border-left: none;
+border-right: none;
+    
+}
+.p-text{
 
 }

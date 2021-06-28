@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 import { useHistory, Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 import "./LogIn.css";
-import logo from "../assets/logo.jpeg"
+import logo from "../assets/logo.jpeg";
 
 function LogIn() {
   const [state, setState] = React.useState({});
@@ -35,7 +35,7 @@ function LogIn() {
         </div>
 
         <form onSubmit={handleSubmit} className="login-profile-form">
-          <p className= "login-h1">Email</p>
+          <p className="login-h1">Email</p>
           <input
             name="email"
             value={state.email}
@@ -44,7 +44,7 @@ function LogIn() {
             className="email-input-form"
           />
           <br />
-          <p className= "login-h1">Password</p>
+          <p className="login-h1">Password</p>
           <input
             type="password"
             name="password"
@@ -58,9 +58,12 @@ function LogIn() {
             Login
           </button>
         </form>
-        <p>
+        <p className= "p-text">
           {" "}
-          Don´t have an account?<Link to="/signup">SignUp</Link>
+          Don´t have an account?
+          <Link to="/signup" className="signup-button">
+            SignUp
+          </Link>
         </p>
       </div>
     </div>
