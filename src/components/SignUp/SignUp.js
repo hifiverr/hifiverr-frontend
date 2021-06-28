@@ -58,17 +58,10 @@ const SignUp = () => {
         <p>Skills</p>
         <input name="skills" value={state.skills} onChange={handleChange} />
         <br />
-        <p>Interests</p>
-        <input
-          name="interests"
-          value={state.Interests}
-          onChange={handleChange}
-        />
-        <br />
         <p>About Me</p>
         <input
           name="aboutme"
-          value={state.aboutme}
+          value={state.about_me}
           onChange={handleChange}
         />
         <br />

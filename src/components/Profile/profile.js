@@ -20,7 +20,7 @@ export default function Profile() {
       <p>Skills:{user.skills}</p>
       <br/>
       <p>About me:</p>
-      <p>{user.aboutme}</p>
+      <p>{user.about_me}</p>
 
 
       <button
