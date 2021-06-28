@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import CreateProfile from "./components/CreateProfile/CreateProfile";
+import AuthContextProvider, { AuthContext } from "./contexts/AuthContext.js";
+import logIn from "./components/LogIn.js/LogIn";
+import signUp from "./components/SignUp/SignUp";
+
+const ProtectedRoute = ({ component: Component, ...rest }) => {
+  const { auth } = React.useContext(AuthContext);
+  return (
+    <Route
+      {...rest}
+      render={(props) =>
+        auth ? <Component {...props} /> : <Redirect to="/login" />
+      }
+    />
+  );
+ };
+ 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthContextProvider>
+       <BrowserRouter>
+         <Switch>
+           <Route path="/login" component={Login} />
+           <Route path="/signup" component={Signup} />
+           <ProtectedRoute path="/profile" component={Profile} />
+           <Redirect to="/login" />
+         </Switch>
+       </BrowserRouter>
+     </AuthContextProvider>
+      
     </div>
   );
 }
