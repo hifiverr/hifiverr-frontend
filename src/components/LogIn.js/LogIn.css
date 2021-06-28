@@ -1,0 +1,27 @@
+.login-logo{
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    margin-top: 13vh;
+    display: block;
+}
+.login-button{
+    display: block;
+    margin: auto;
+    border-radius: 50px;
+    width: 183px;
+    height: 76px;
+    background: #00b16d;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    line-height: 76px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 110px;
+    
+
+}
+.login-h1{
+
+}

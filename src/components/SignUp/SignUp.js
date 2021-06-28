@@ -21,6 +21,13 @@ const SignUp = () => {
     <div>
       <p>Sign Up</p>
       <form onSubmit={handleSubmit}>
+        <p>Image</p>
+        <input
+          name="profile_image"
+          value={state.profile_image}
+          onChange={handleChange}
+        />
+        <br />
         <p>Email</p>
         <input name="email" value={state.email} onChange={handleChange} />
         <br />

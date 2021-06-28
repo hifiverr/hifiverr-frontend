@@ -4,6 +4,8 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { useHistory, Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
+import "./LogIn.css";
+import logo from "../assets/logo.jpeg"
 
 function LogIn() {
   const [state, setState] = React.useState({});
@@ -27,30 +29,40 @@ function LogIn() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <p>Email</p>
-        <input
-          name="email"
-          value={state.email}
-          onChange={handleChange}
-          placeholder="email@example.com"
-        />
-        <br />
-        <p>Password</p>
-        <input
-          type="password"
-          name="password"
-          value={state.password}
-          onChange={handleChange}
-          placeholder="**********"
-        />
-        <br />
-        <button type="submit">Login</button>
-      </form>
-      <p>
-        {" "}
-        Don´t have an account?<Link to="/signup">SignUp</Link>
-      </p>
+      <div className="login-container">
+        <div className="login-inner-container">
+          <img src={logo} alt="logo" className="login-logo" />
+        </div>
+
+        <form onSubmit={handleSubmit} className="login-profile-form">
+          <p className= "login-h1">Email</p>
+          <input
+            name="email"
+            value={state.email}
+            onChange={handleChange}
+            placeholder="email@example.com"
+            className="email-input-form"
+          />
+          <br />
+          <p className= "login-h1">Password</p>
+          <input
+            type="password"
+            name="password"
+            value={state.password}
+            onChange={handleChange}
+            placeholder="**********"
+            className="password-input-form"
+          />
+          <br />
+          <button type="submit" className="login-button">
+            Login
+          </button>
+        </form>
+        <p>
+          {" "}
+          Don´t have an account?<Link to="/signup">SignUp</Link>
+        </p>
+      </div>
     </div>
   );
 }
