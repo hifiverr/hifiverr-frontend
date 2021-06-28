@@ -11,9 +11,9 @@ export default function AuthContextProvider(props) {
 
   React.useEffect(() => {
     axios
-      .get("/verify-toke", config)
+      .get("/auth/verify-token", config)
       .then((response) => {
-        setUser(response.data.user);
+        setUser(response.data);
         setAuth(true);
       })
       .catch(() => {

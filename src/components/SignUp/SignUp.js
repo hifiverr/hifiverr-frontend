@@ -8,7 +8,7 @@ const SignUp = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("/resgister", state).then((response) => {
+    axios.post("/auth/register", state).then((response) => {
       history.push("/login");
     });
   };
@@ -25,7 +25,12 @@ const SignUp = () => {
         <input name="email" value={state.email} onChange={handleChange} />
         <br />
         <p>Password</p>
-        <input name="password" value={state.password} onChange={handleChange} />
+        <input
+          type="password"
+          name="password"
+          value={state.password}
+          onChange={handleChange}
+        />
         <br />
         <p>First Name</p>
         <input
