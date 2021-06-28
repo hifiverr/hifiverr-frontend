@@ -1,0 +1,65 @@
+.h1-signup{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.profile-image-input{
+
+}
+
+.signup-email-input {
+    border: 1px solid #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+.password-input{
+    border: 1px solid #000000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.firstname-input{
+    border: 1px solid #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.lastname-input{
+    border: 1px solid #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.location-input{
+    border: 1px solid #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.language-input{
+    border: 1px solid #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.skill-input{
+    border: 1px solid #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.interests-input{
+    border: 1px solid #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.aboutme-input{
+    border: 1px solid #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}

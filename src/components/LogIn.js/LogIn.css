@@ -1,8 +1,8 @@
-@font-face {
+/* @font-face {
     font-family: 'Domaine';
-    src: local('Domaine'), url(./fonts/DomaineDisplayApp-MediumItalic.ttf('medium');
-  }
-
+    src: local('Domaine'), url('./fonts/domaine-display-web-bold.woff') format ('woff');
+  } */
+  
 .login-logo{
     width: 150px;
     height: 150px;
@@ -39,6 +39,7 @@
 }
 
 .email-input-form{
+
 border: 1px solid #000000;
 border-top: none;
 border-left: none;
@@ -53,5 +54,6 @@ border-right: none;
     
 }
 .p-text{
+    font-size: 15px;
 
 }
