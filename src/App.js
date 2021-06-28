@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Link, Route, Redirect } from "react-router-dom";
 import AuthContextProvider, { AuthContext } from "./Context/AuthContext";
 import signUp from "./components/SignUp/SignUp";
 import LogIn from "./components/LogIn.js/LogIn";
-import Profile from "./components/CreateProfile/profile";
+import Profile from "./components/Profile/profile";
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
   const { auth } = React.useContext(AuthContext);

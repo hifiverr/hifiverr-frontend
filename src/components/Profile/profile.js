@@ -10,7 +10,19 @@ export default function Profile() {
 
   return (
     <div>
-      <p>Welcome {user.email}</p>
+      <img src={user.profile_image} alt=""/>
+      <p>{user.firstname} {user.lastname}</p>
+      <br/>
+      <p>{user.location}</p>
+      <br/>
+      <p>Language:{user.primary_language}</p>
+      <br/>
+      <p>Skills:{user.skills}</p>
+      <br/>
+      <p>About me:</p>
+      <p>{user.aboutme}</p>
+
+
       <button
         onClick={() => {
           Cookies.remove("authToken");
@@ -19,6 +31,7 @@ export default function Profile() {
       >
         Logout
       </button>
+
     </div>
   );
 }
