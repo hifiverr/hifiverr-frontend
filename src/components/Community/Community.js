@@ -25,11 +25,13 @@ function Community({ community, setCommunity }) {
       <Header />
       {community.map(function (group, index) {
         return (
-          <div className="group">
-            <Link to={`/community/${group.id}`}>
-              <img className="group-image" src={group.image} />
-              <h1 className="group-tittle">{group.name}</h1>
-            </Link>
+          <div className="group_container">
+            <div>
+              <Link to={`/community/${group.id}`}>
+                <img className="group-image" src={group.image} />
+                <h1 className="group-tittle">{group.name}</h1>
+              </Link>
+            </div>
           </div>
         );
       })}

@@ -31,6 +31,12 @@ const CreateEvents = () => {
             </option>
           ))}
         </select>
+        <label htmlFor="title">Title</label>
+        <input id="title" name="title" onChange={handleChange} />
+        <label htmlFor="content">Content</label>
+        <textarea id="content" name="content" onChange={handleChange} />
+        <label htmlFor="date">Date</label>
+        <input id="date" type="date" name="date" onChange={handleChange} />
       </form>
     </div>
   );
