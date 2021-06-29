@@ -1,11 +1,9 @@
 import React from "react";
+import { AuthContext } from "../../Context/AuthContext";
 
 const CreateProfile = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+  const { user } = React.useContext(AuthContext);
+  return <div></div>;
 };
 
 export default CreateProfile;
