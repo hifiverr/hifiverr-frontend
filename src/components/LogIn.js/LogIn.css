@@ -32,27 +32,30 @@
 .login-h1 {
   font-size: 20px;
   font-weight: 700;
+  color: #3d3f43;
 }
 .sign-button {
   color: #00b16d;
+  text-decoration: none;
 }
 
 .email-input-form {
-  border: 1px solid #000000;
+  border: 1px solid #3d3f43;
   border-top: none;
   border-left: none;
   border-right: none;
-  width: 90%;
+  width: 96%;
 }
 .password-input-form {
-  border: 1px solid #000000;
+  border: 1px solid #3d3f43;
   border-top: none;
   border-left: none;
   border-right: none;
-  width: 90%;
+  width: 96%;
 }
 .p-text {
   font-size: 15px;
   margin-top: 30px;
   text-align: center;
+  color: #3d3f43;
 }

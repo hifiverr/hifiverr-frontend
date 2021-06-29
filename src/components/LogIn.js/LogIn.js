@@ -59,10 +59,8 @@ function LogIn() {
           </button>
         </form>
         <p className="p-text">
-          Don´t have an account?
-          <Link to="/signup" className="sign-button">
-            SignUp
-          </Link>
+          Don´t have an account?  
+          <Link to="/signup" className="sign-button"> SignUp</Link>
         </p>
       </div>
     </div>

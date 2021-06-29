@@ -5,6 +5,7 @@ import signUp from "./components/SignUp/SignUp";
 import LogIn from "./components/LogIn.js/LogIn";
 import Profile from "./components/CreateProfile/profile";
 import Community from "./components/Community/Community";
+import feed from "./components/Community/feed";
 
 import "./App.css";
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/login" component={LogIn} />
             <Route path="/signup" component={signUp} />
             <Route path="/community" component={Community} />
+            <Route path="/feed" component={feed} />
             <ProtectedRoute path="/profile" component={Profile} />
             <Redirect to="/login" />
           </Switch>

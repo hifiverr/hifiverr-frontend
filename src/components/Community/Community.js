@@ -1,14 +1,15 @@
 import React from "react";
 import axios from "axios";
+import "./Community.css";
 
 function Community() {
   const [community, setCommunity] = React.useState([]);
 
   React.useEffect(() => {
-    fetchCommunitys();
+    fetchCommunity();
   }, []);
 
-  function fetchCommunitys() {
+  function fetchCommunity() {
     axios
       .get("/communities")
       .then(function (response) {
@@ -24,9 +25,9 @@ function Community() {
       <h1>Header</h1>
       {community.map(function (group, index) {
         return (
-          <div>
-            <h1>{group.name}</h1>
-            <img src={group.image} />
+          <div className="group">
+            <img className="group-" src={group.image} />
+            <h1 className="group-tittle">{group.name}</h1>
           </div>
         );
       })}

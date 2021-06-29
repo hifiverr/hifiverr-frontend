@@ -35,7 +35,7 @@
 }
 
 .signup-email-input {
-  border: 1px solid #000000;
+  border: 1px solid #3d3f43;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -43,42 +43,42 @@
   width: 90%;
 }
 .password-input {
-  border: 1px solid #000000;
+  border: 1px solid #3d3f43;
   border-top: none;
   border-left: none;
   border-right: none;
   width: 90%;
 }
 .firstname-input {
-  border: 1px solid #000000;
+  border: 1px solid #3d3f43;
   border-top: none;
   border-left: none;
   border-right: none;
   width: 90%;
 }
 .lastname-input {
-  border: 1px solid #000000;
+  border: 1px solid #3d3f43;
   border-top: none;
   border-left: none;
   border-right: none;
   width: 90%;
 }
 .location-input {
-  border: 1px solid #000000;
+  border: 1px solid #3d3f43;
   border-top: none;
   border-left: none;
   border-right: none;
   width: 90%;
 }
 .language-input {
-  border: 1px solid #000000;
+  border: 1px solid #3d3f43;
   border-top: none;
   border-left: none;
   border-right: none;
   width: 90%;
 }
 .skill-input {
-  border: 1px solid #000000;
+  border: 1px solid #3d3f43;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -86,7 +86,7 @@
 }
 
 .aboutme-textarea {
-  border: 1px solid #000000;
+  border: 1px solid #3d3f43;
   border-radius: 10px;
   width: 250px;
   height: 90px;
@@ -128,5 +128,8 @@
   margin-top: 20px;
   margin-bottom: 20px;
   border: none;
-  
+}
+
+.labels_text {
+  color: #3d3f43;
 }

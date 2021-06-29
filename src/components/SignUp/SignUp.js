@@ -1,11 +1,11 @@
 import React from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import upload_image from "../assets/upload_image.svg"
+import upload_image from "../assets/upload_image.svg";
 import "./SignUp.css";
 
 const SignUp = () => {
-  const [state, setState] = React.useState({profile_image: upload_image});
+  const [state, setState] = React.useState({ profile_image: upload_image });
   const history = useHistory();
   const [isImageDisplayed, setIsImageDisplayed] = React.useState(false);
 
@@ -25,7 +25,7 @@ const SignUp = () => {
       <br />
       <form onSubmit={handleSubmit}>
         {isImageDisplayed ? (
-          <div className= "signup-header">
+          <div className="signup-header">
             <label htmlFor="image" className="profile_image_label">
               Upload Photo
             </label>
@@ -50,7 +50,7 @@ const SignUp = () => {
         )}
 
         <br />
-        <p>Email</p>
+        <p className="labels_text">Email</p>
         <input
           name="email"
           value={state.email}
@@ -58,7 +58,7 @@ const SignUp = () => {
           className="signup-email-input"
         />
         <br />
-        <p>Password</p>
+        <p className="labels_text">Password</p>
         <input
           type="password"
           name="password"
@@ -67,7 +67,7 @@ const SignUp = () => {
           className="password-input"
         />
         <br />
-        <p>First Name</p>
+        <p className="labels_text">First Name</p>
         <input
           name="firstname"
           value={state.firstname}
@@ -75,7 +75,7 @@ const SignUp = () => {
           className="firstname-input"
         />
         <br />
-        <p>Last Name</p>
+        <p className="labels_text">Last Name</p>
         <input
           name="lastname"
           value={state.lastname}
@@ -83,7 +83,7 @@ const SignUp = () => {
           className="lastname-input"
         />
         <br />
-        <p>Location</p>
+        <p className="labels_text">Location</p>
         <input
           name="location"
           value={state.location}
@@ -91,7 +91,7 @@ const SignUp = () => {
           className="location-input"
         />
         <br />
-        <p>Language</p>
+        <p className="labels_text">Language</p>
         <input
           name="language"
           value={state.primary_language}
@@ -99,7 +99,7 @@ const SignUp = () => {
           className="language-input"
         />
         <br />
-        <p>Skills</p>
+        <p className="labels_text">Skills</p>
         <input
           name="skills"
           value={state.skills}
@@ -107,7 +107,7 @@ const SignUp = () => {
           className="skill-input"
         />
         <br />
-        <p>About Me</p>
+        <p className="labels_text">About Me</p>
         <textarea
           name="aboutme"
           value={state.aboutme}
