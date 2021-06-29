@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import Cookies from "js-cookie";
 import EditProfile from "./EditProfile";
 import edit_profile from "../assets/edit_profile.svg";
+import Header from "../Header/Header";
 const Profile = ({ match }) => {
   const { user } = React.useContext(AuthContext);
   const history = useHistory();
@@ -14,7 +15,9 @@ const Profile = ({ match }) => {
   const routerId = match.params.id;
 
   return (
+    
     <div>
+      <Header />
       {isUserInEditMode ? (
         <EditProfile routerId={routerId} />
       ) : (

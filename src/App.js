@@ -27,7 +27,7 @@ function App() {
             <Route path="/login" component={LogIn} />
             <Route path="/signup" component={SignUp} />
             <ProtectedRoute path="/profile/:id" component={Profile} />
-            {/* <Redirect to="/login" /> */}
+            <Redirect to="/login" />
           </Switch>
         </BrowserRouter>
       </AuthContextProvider>
