@@ -1,59 +1,70 @@
-/* @font-face {
-    font-family: 'Domaine';
-    src: local('Domaine'), url('./fonts/domaine-display-web-bold.woff') format ('woff');
-  } */
-  
-.login-logo{
-    width: 150px;
-    height: 150px;
-    margin: auto;
-    margin-top: 13vh;
-    display: block;
-}
-.login-button{
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    border-radius: 10px;
-    width: 153px;
-    height: 56px;
-    background: #00b16d;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    line-height: 76px;
-    font-size: 25px;
-    font-weight: 700;
-    margin-top: 110px;    
+@font-face {
+  font-family: "Domaine";
+  src: local("Domaine"),
+    url("../../fonts/DomaineDisplay-Regular.otf") format ("otf");
+  /* url('../../fonts/DomaineDisplay-Medium.otf') format ('otf'); */
 }
 
-.login-h1{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-}
-.signup-button{
-    color:#00b16d;
+.login-container {
+  width: 250px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.email-input-form{
-
-border: 1px solid #000000;
-border-top: none;
-border-left: none;
-border-right: none;
-
+.login-logo {
+  width: 250px;
+  height: 150px;
+  margin: auto;
+  margin-top: 13vh;
+  display: block;
 }
-.password-input-form{
-border: 1px solid #000000;
-border-top: none;
-border-left: none;
-border-right: none;
-    
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-radius: 10px;
+  width: 250px;
+  height: 56px;
+  background: #00b16d;
+  font-family: "Domaine";
+  color: white;
+  text-align: center;
+  line-height: 76px;
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 110px;
+  border: none;
 }
-.p-text{
-    font-size: 15px;
 
+.login-h1 {
+  font-family: "Domaine";
+  font-size: 20px;
+  font-weight: 700;
+}
+.sign-button {
+  color: #00b16d;
+}
+
+.email-input-form {
+  border: 1px solid #000000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 90%;
+  font-family: "Domaine";
+}
+.password-input-form {
+  border: 1px solid #000000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 90%;
+  font-family: "Domaine";
+}
+.p-text {
+  font-size: 15px;
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Domaine";
 }

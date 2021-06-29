@@ -1,11 +1,13 @@
 import React from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import "./SignUp.css" ;
+import upload_image from "../assets/upload_image.svg"
+import "./SignUp.css";
 
 const SignUp = () => {
-  const [state, setState] = React.useState({});
+  const [state, setState] = React.useState({profile_image: upload_image});
   const history = useHistory();
+  const [isImageDisplayed, setIsImageDisplayed] = React.useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,15 +22,33 @@ const SignUp = () => {
 
   return (
     <div className="signup-wrapper">
-      <p className="h1-signup">Sign Up</p>
+      <br />
       <form onSubmit={handleSubmit}>
-        <p>Image</p>
-        <input
-          name="profile_image"
-          value={state.profile_image}
-          onChange={handleChange}
-          className="profile-image-input"
-        />
+        {isImageDisplayed ? (
+          <div className= "signup-header">
+            <label htmlFor="image" className="profile_image_label">
+              Upload Photo
+            </label>
+            <input
+              name="profile_image"
+              onChange={handleChange}
+              className="profile-image-input"
+            />
+            <button
+              onClick={() => setIsImageDisplayed(false)}
+              className="upload_image_button"
+            >
+              Confirm
+            </button>
+          </div>
+        ) : (
+          <img
+            src={state.profile_image}
+            onClick={() => setIsImageDisplayed(true)}
+            className="create_profile_image"
+          />
+        )}
+
         <br />
         <p>Email</p>
         <input
@@ -87,20 +107,12 @@ const SignUp = () => {
           className="skill-input"
         />
         <br />
-        <p>Interests</p>
-        <input
-          name="interests"
-          value={state.Interests}
-          onChange={handleChange}
-          className="interests-input"
-        />
-        <br />
         <p>About Me</p>
-        <input
+        <textarea
           name="aboutme"
           value={state.aboutme}
           onChange={handleChange}
-          className="aboutme-input"
+          className="aboutme-textarea"
         />
         <br />
 

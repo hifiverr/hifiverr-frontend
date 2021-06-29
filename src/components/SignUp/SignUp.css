@@ -1,65 +1,151 @@
-.h1-signup{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: 700;
+@font-face {
+  font-family: "Domaine";
+  src: local("Domaine"),
+    url("../../fonts/DomaineDisplay-Regular.otf") format ("otf");
+  /* url('../../fonts/DomaineDisplay-Medium.otf') format ('otf'); */
 }
 
+.create_profile_image {
+  display: block;
+  margin: auto;
+  border-radius: 100px;
+  width: 183px;
+  height: 76px;
+  background: #00b16d;
+  color: white;
+  margin-top: 10px;
+  width: 152px;
+  height: 152px;
+}
+.profile_image_label {
+  color: #00b16d;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Domaine";
+  text-align: center;
+  display: block;
+}
 
-.profile-image-input{
+.profile-image-input {
+  text-align: center;
+  font-family: "Domaine";
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 300px;
+  height: 35px;
+  border: 1px solid #00b16d;
+  border-radius: 10px;
+}
 
+.signup-wrapper {
+  width: 300px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: "Domaine";
 }
 
 .signup-email-input {
-    border: 1px solid #000000;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-  }
-.password-input{
-    border: 1px solid #000000;
+  border: 1px solid #000000;
   border-top: none;
   border-left: none;
   border-right: none;
+  font-family: "Domaine";
+  text-align: left;
+  width: 90%;
 }
-.firstname-input{
-    border: 1px solid #000000;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+.password-input {
+  border: 1px solid #000000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-family: "Domaine";
+  width: 90%;
 }
-.lastname-input{
-    border: 1px solid #000000;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+.firstname-input {
+  border: 1px solid #000000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-family: "Domaine";
+  width: 90%;
 }
-.location-input{
-    border: 1px solid #000000;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+.lastname-input {
+  border: 1px solid #000000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-family: "Domaine";
+  width: 90%;
 }
-.language-input{
-    border: 1px solid #000000;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+.location-input {
+  border: 1px solid #000000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-family: "Domaine";
+  width: 90%;
 }
-.skill-input{
-    border: 1px solid #000000;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+.language-input {
+  border: 1px solid #000000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-family: "Domaine";
+  width: 90%;
 }
-.interests-input{
-    border: 1px solid #000000;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+.skill-input {
+  border: 1px solid #000000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-family: "Domaine";
+  width: 90%;
 }
-.aboutme-input{
-    border: 1px solid #000000;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+
+.aboutme-textarea {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  width: 250px;
+  height: 90px;
+  width: 90%;
+  font-family: "Domaine";
+}
+
+.upload_image_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-radius: 10px;
+  width: 123px;
+  height: 36px;
+  background: #00b16d;
+  color: white;
+  text-align: center;
+  line-height: 76px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+  border: none;
+  font-family: "Domaine";
+}
+.signup-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100px;
+  border-radius: 10px;
+  width: 153px;
+  height: 56px;
+  background: #00b16d;
+  color: white;
+  text-align: center;
+  line-height: 76px;
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  font-family: "Domaine";
 }

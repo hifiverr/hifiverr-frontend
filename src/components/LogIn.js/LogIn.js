@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 import { useHistory, Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 import "./LogIn.css";
-import logo from "../assets/logo.jpeg";
+import logo from "../assets/logo.svg";
 
 function LogIn() {
   const [state, setState] = React.useState({});
@@ -58,11 +58,12 @@ function LogIn() {
             Login
           </button>
         </form>
-        <p className= "p-text">
-          {" "}
-          Don´t have an account?
-          <Link to="/signup" className="signup-button">
-            SignUp
+        <p className="p-text">
+          
+          Don´t have an account?  
+                    
+          <Link to="/signup" className="sign-button">
+             SignUp
           </Link>
         </p>
       </div>
