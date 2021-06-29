@@ -4,6 +4,8 @@ import AuthContextProvider, { AuthContext } from "./Context/AuthContext";
 import signUp from "./components/SignUp/SignUp";
 import LogIn from "./components/LogIn.js/LogIn";
 import Profile from "./components/CreateProfile/profile";
+import Community from "./components/Community/Community";
+
 import "./App.css";
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
@@ -26,6 +28,7 @@ function App() {
           <Switch>
             <Route path="/login" component={LogIn} />
             <Route path="/signup" component={signUp} />
+            <Route path="/community" component={Community} />
             <ProtectedRoute path="/profile" component={Profile} />
             <Redirect to="/login" />
           </Switch>

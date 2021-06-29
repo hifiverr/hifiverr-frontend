@@ -6,7 +6,6 @@ import { useHistory, Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 import "./LogIn.css";
 import logo from "../assets/logo.svg";
-import "../../fonts/Macan-Regular.ttf";
 
 function LogIn() {
   const [state, setState] = React.useState({});
