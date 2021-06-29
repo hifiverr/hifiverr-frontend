@@ -1,10 +1,13 @@
 import React from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import upload_image from "../assets/upload_image.svg";
+import "./SignUp.css";
 
 const SignUp = () => {
-  const [state, setState] = React.useState({});
+  const [state, setState] = React.useState({ profile_image: upload_image });
   const history = useHistory();
+  const [isImageDisplayed, setIsImageDisplayed] = React.useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -18,55 +21,104 @@ const SignUp = () => {
   };
 
   return (
-    <div>
-      <p>Sign Up</p>
+    <div className="signup-wrapper">
+      <br />
       <form onSubmit={handleSubmit}>
-        <p>Image</p>
+        {isImageDisplayed ? (
+          <div className="signup-header">
+            <label htmlFor="image" className="profile_image_label">
+              Upload Photo
+            </label>
+            <input
+              name="profile_image"
+              onChange={handleChange}
+              className="profile-image-input"
+            />
+            <button
+              onClick={() => setIsImageDisplayed(false)}
+              className="upload_image_button"
+            >
+              Confirm
+            </button>
+          </div>
+        ) : (
+          <img
+            src={state.profile_image}
+            onClick={() => setIsImageDisplayed(true)}
+            className="create_profile_image"
+          />
+        )}
+
+        <br />
+        <p className="labels_text">Email</p>
         <input
-          name="profile_image"
-          value={state.profile_image}
+          name="email"
+          value={state.email}
           onChange={handleChange}
+          className="signup-input"
         />
         <br />
-        <p>Email</p>
-        <input name="email" value={state.email} onChange={handleChange} />
-        <br />
-        <p>Password</p>
+        <p className="labels_text">Password</p>
         <input
           type="password"
           name="password"
           value={state.password}
           onChange={handleChange}
+          className="signup-input"
         />
         <br />
-        <p>First Name</p>
+        <p className="labels_text">First Name</p>
         <input
           name="firstname"
           value={state.firstname}
           onChange={handleChange}
+          className="signup-input"
         />
         <br />
-        <p>Last Name</p>
-        <input name="lastname" value={state.lastname} onChange={handleChange} />
+        <p className="labels_text">Last Name</p>
+        <input
+          name="lastname"
+          value={state.lastname}
+          onChange={handleChange}
+          className="signup-input"
+        />
         <br />
-        <p>Location</p>
-        <input name="location" value={state.location} onChange={handleChange} />
+        <p className="labels_text">Location</p>
+        <input
+          name="location"
+          value={state.location}
+          onChange={handleChange}
+          className="signup-input"
+        />
         <br />
-        <p>Language</p>
+        <p className="labels_text">Language</p>
         <input
           name="primary_language"
           value={state.primary_language}
           onChange={handleChange}
+          className="signup-input"
         />
         <br />
-        <p>Skills</p>
-        <input name="skills" value={state.skills} onChange={handleChange} />
+        <p className="labels_text">Skills</p>
+        <input
+          name="skills"
+          value={state.skills}
+          onChange={handleChange}
+          className="signup-input"
+        />
         <br />
-        <p>About Me</p>
-        <input name="about_me" value={state.about_me} onChange={handleChange} />
+        <p className="labels_text">About Me</p>
+        <input
+          name="about_me"
+          value={state.about_me}
+          onChange={handleChange}
+          className="aboutme-textarea"
+        />
         <br />
 
-        <button type="submit">Sign Up</button>
+        <button type="submit" className="signup-button">
+          Sign Up
+        </button>
       </form>
     </div>
   );

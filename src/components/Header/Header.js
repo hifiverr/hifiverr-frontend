@@ -1,7 +1,6 @@
 import React from "react";
 import profile from "../assets/profile.svg";
 import logo from "../assets/logo.svg";
-import logo_community from "../assets/logo_community.svg";
 import community from "../assets/community.svg";
 import "./Header.css";
 import { Link, useHistory } from "react-router-dom";
