@@ -40,7 +40,9 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="firstname">First name</label>
+        <label htmlFor="firstname" className="h1-edit-profile">
+          First name
+        </label>
         <input
           id="firstname"
           name="firstname"
@@ -48,7 +50,9 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
           onChange={handleChange}
         />
         <br />
-        <label htmlFor="lastname">Last name</label>
+        <label htmlFor="lastname" className="h1-edit-profile">
+          Last name
+        </label>
         <input
           id="lastname"
           name="lastname"
@@ -56,7 +60,9 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
           onChange={handleChange}
         />
         <br />
-        <label htmlFor="location">Location</label>
+        <label htmlFor="location" className="h1-edit-profile">
+          Location
+        </label>
         <input
           id="location"
           name="location"
@@ -64,7 +70,9 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
           onChange={handleChange}
         />
         <br />
-        <label htmlFor="primary_language">Language</label>
+        <label htmlFor="primary_language" className="h1-edit-profile">
+          Language
+        </label>
         <input
           id="primary_language"
           name="primary_language"
@@ -72,7 +80,9 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
           onChange={handleChange}
         />
         <br />
-        <label htmlFor="skills">Skills</label>
+        <label htmlFor="skills" className="h1-edit-profile">
+          Skills
+        </label>
         <input
           id="skills"
           name="skills"
@@ -80,8 +90,10 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
           onChange={handleChange}
         />
         <br />
-        <label htmlFor="about_me">About me</label>
-        <input
+        <label htmlFor="about_me" className="h1-edit-profile">
+          About me
+        </label>
+        <textarea
           id="about_me"
           name="about_me"
           value={editProfile.about_me}
@@ -89,10 +101,16 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
         />
         <br />
 
-        <button type="button" onClick={() => setIsUserInEditMode(false)}>
+        <button
+          className="cancel-button-profile"
+          type="button"
+          onClick={() => setIsUserInEditMode(false)}
+        >
           Cancel
         </button>
-        <button type="submit">Save</button>
+        <button type="submit" className="save-button-profile">
+          Save
+        </button>
       </form>
     </div>
   );
