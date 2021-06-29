@@ -1,0 +1,25 @@
+.header_container {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 10px 15px 10px;
+}
+
+.logo {
+  width: 35%;
+}
+
+.profile_logo_container {
+  height: 34.609px;
+}
+
+.community_logo_container {
+  height: 34.609px;
+}
+
+.profile_logo {
+  width: 30%;
+}
+
+.community_logo {
+  width: 30%;
+}

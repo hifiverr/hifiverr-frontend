@@ -6,6 +6,7 @@ import Cookies from "js-cookie";
 import EditProfile from "./EditProfile";
 import edit_profile from "../assets/edit_profile.svg";
 import axios from "axios";
+import Header from "../Header/Header";
 const Profile = ({ match }) => {
   const { user } = React.useContext(AuthContext);
   const history = useHistory();
@@ -51,6 +52,7 @@ const Profile = ({ match }) => {
         </div>
       ) : null}
       {/* is in edit mode  */}
+      <Header />
       {isUserInEditMode ? (
         <EditProfile
           routerId={routerId}
