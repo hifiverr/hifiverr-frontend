@@ -34,7 +34,7 @@
   text-align: left;
 }
 
-.signup-email-input {
+.signup-input {
   border: 1px solid #3d3f43;
   border-top: none;
   border-left: none;
@@ -42,54 +42,12 @@
   text-align: left;
   width: 90%;
 }
-.password-input {
-  border: 1px solid #3d3f43;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  width: 90%;
-}
-.firstname-input {
-  border: 1px solid #3d3f43;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  width: 90%;
-}
-.lastname-input {
-  border: 1px solid #3d3f43;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  width: 90%;
-}
-.location-input {
-  border: 1px solid #3d3f43;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  width: 90%;
-}
-.language-input {
-  border: 1px solid #3d3f43;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  width: 90%;
-}
-.skill-input {
-  border: 1px solid #3d3f43;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  width: 90%;
-}
 
 .aboutme-textarea {
   border: 1px solid #3d3f43;
   border-radius: 10px;
   width: 250px;
-  height: 90px;
+  height: 200px;
   width: 90%;
 }
 

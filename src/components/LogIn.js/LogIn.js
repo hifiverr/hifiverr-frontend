@@ -18,7 +18,7 @@ function LogIn() {
       setUser(response.data.user);
       setAuth(true);
       Cookies.set("authToken", response.data.token);
-      history.push("/profile");
+      history.push(`/profile/${response.data.user.id}`);
     });
   };
 

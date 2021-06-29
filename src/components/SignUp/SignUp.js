@@ -55,7 +55,7 @@ const SignUp = () => {
           name="email"
           value={state.email}
           onChange={handleChange}
-          className="signup-email-input"
+          className="signup-input"
         />
         <br />
         <p className="labels_text">Password</p>
@@ -64,7 +64,7 @@ const SignUp = () => {
           name="password"
           value={state.password}
           onChange={handleChange}
-          className="password-input"
+          className="signup-input"
         />
         <br />
         <p className="labels_text">First Name</p>
@@ -72,7 +72,7 @@ const SignUp = () => {
           name="firstname"
           value={state.firstname}
           onChange={handleChange}
-          className="firstname-input"
+          className="signup-input"
         />
         <br />
         <p className="labels_text">Last Name</p>
@@ -80,7 +80,7 @@ const SignUp = () => {
           name="lastname"
           value={state.lastname}
           onChange={handleChange}
-          className="lastname-input"
+          className="signup-input"
         />
         <br />
         <p className="labels_text">Location</p>
@@ -88,15 +88,15 @@ const SignUp = () => {
           name="location"
           value={state.location}
           onChange={handleChange}
-          className="location-input"
+          className="signup-input"
         />
         <br />
         <p className="labels_text">Language</p>
         <input
-          name="language"
+          name="primary_language"
           value={state.primary_language}
           onChange={handleChange}
-          className="language-input"
+          className="signup-input"
         />
         <br />
         <p className="labels_text">Skills</p>
@@ -104,13 +104,13 @@ const SignUp = () => {
           name="skills"
           value={state.skills}
           onChange={handleChange}
-          className="skill-input"
+          className="signup-input"
         />
         <br />
         <p className="labels_text">About Me</p>
-        <textarea
-          name="aboutme"
-          value={state.aboutme}
+        <input
+          name="about_me"
+          value={state.about_me}
           onChange={handleChange}
           className="aboutme-textarea"
         />
