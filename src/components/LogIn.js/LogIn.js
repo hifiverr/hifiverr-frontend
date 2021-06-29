@@ -6,6 +6,7 @@ import { useHistory, Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 import "./LogIn.css";
 import logo from "../assets/logo.svg";
+import "../../fonts/Macan-Regular.ttf";
 
 function LogIn() {
   const [state, setState] = React.useState({});
@@ -59,11 +60,9 @@ function LogIn() {
           </button>
         </form>
         <p className="p-text">
-          
-          Don´t have an account?  
-                    
+          Don´t have an account?
           <Link to="/signup" className="sign-button">
-             SignUp
+            SignUp
           </Link>
         </p>
       </div>
