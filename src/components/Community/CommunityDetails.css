@@ -1,0 +1,22 @@
+.community-container {
+}
+
+.h1-community-events {
+  font-size: 14px;
+  font-weight: 600;
+  color: #3d3f43;
+  text-decoration: none;
+  text-align: center;
+}
+
+.community-details-cover {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+}
+.h1-community-post {
+}
+.text-area {
+}
+.button-share {
+}

@@ -46,6 +46,7 @@ const SignUp = () => {
             src={state.profile_image}
             onClick={() => setIsImageDisplayed(true)}
             className="create_profile_image"
+            alt="profile-image"
           />
         )}
 
