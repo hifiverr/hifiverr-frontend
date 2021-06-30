@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 import { AuthContext } from "../../Context/AuthContext";
 import { useHistory } from "react-router-dom";
 import Cookies from "js-cookie";
-import EditProfile from "./EditProfile";
+import EditProfile from "./EditProfile/EditProfile";
 import edit_profile from "../assets/edit_profile.svg";
 import axios from "axios";
 import Header from "../Header/Header";
+import "./Profile.css"
+
 const Profile = ({ match }) => {
   const { user } = React.useContext(AuthContext);
   const history = useHistory();
@@ -43,12 +45,14 @@ const Profile = ({ match }) => {
     <div>
       {/* displayin popup  */}
       {isPopupDisplayed ? (
-        <div>
-          <button onClick={() => setIsPopupDisplayed(false)}>X</button>
-          <h2>
-            {guestInfo.firstname} {guestInfo.lastname}
-          </h2>
-          <h4>{guestInfo.email}</h4>
+          <div className="popup-container">
+            <div className="popup-content">
+            <button onClick={() => setIsPopupDisplayed(false)}>X</button>
+            <h2>
+              {guestInfo.firstname} {guestInfo.lastname}
+            </h2>
+            <h4>{guestInfo.email}</h4>
+            </div>
         </div>
       ) : null}
       {/* is in edit mode  */}
@@ -60,69 +64,52 @@ const Profile = ({ match }) => {
         />
       ) : (
         <div>
-          {/* button edit profile  */}
-          {routerId === user.id ? (
-            <img src={edit_profile} onClick={() => setIsUserInEditMode(true)} />
-          ) : null}
 
-          {isGuestProfile ? (
-            <img src={guestInfo.profile_image} alt="" />
-          ) : (
-            <img src={user.profile_image} alt="" />
-          )}
-
-          {isGuestProfile ? (
-            <p>
-              {guestInfo.firstname} {guestInfo.lastname}
-            </p>
-          ) : (
-            <p>
-              {user.firstname} {user.lastname}
-            </p>
-          )}
-
-          <br />
-          {isGuestProfile ? (
-            <p>{guestInfo.location}</p>
-          ) : (
-            <p>{user.location}</p>
-          )}
-          <br />
-          {isGuestProfile ? (
-            <p>Language:{guestInfo.primary_language}</p>
-          ) : (
-            <p>Language:{user.primary_language}</p>
-          )}
-          <br />
-          {isGuestProfile ? (
-            <p>Skills:{guestInfo.skills}</p>
-          ) : (
-            <p>Skills:{user.skills}</p>
-          )}
-          <br />
-          <p>About me:</p>
-          {isGuestProfile ? (
-            <p>{guestInfo.about_me}</p>
-          ) : (
-            <p>{user.about_me}</p>
-          )}
-          {/* button logout/contact  */}
-          {routerId === user.id ? (
-            <button
-              onClick={() => {
-                Cookies.remove("authToken");
-                history.push("/login");
-              }}
-            >
-              {" "}
-              Logout{" "}
-            </button>
-          ) : (
-            <>
-              <button>Connect</button>
-              <button onClick={() => setIsPopupDisplayed(true)}>Contact</button>
-            </>
-          )}
+          {/* Header section */}
+          <div className="profile-header-container">
+            <img className="profile-header-image" src={isGuestProfile ? guestInfo.profile_image : user.profile_image} alt="" />
+              <div className="profile-header-content-container">
+                <p className="profile-header-content-text">{isGuestProfile ? guestInfo.firstname : user.firstname} {isGuestProfile ?  guestInfo.lastname : user.lastname}</p>
+                <p className="profile-header-content-text">{isGuestProfile ? guestInfo.location : user.location}</p>
+              </div>
+            {/* button edit profile  */}
+            {routerId === user.id ? (
+              <img className="profile-header-settings" src={edit_profile} onClick={() => setIsUserInEditMode(true)} />
+            ) : null}
+          </div>
+          <div className="about-container">
+            <h3>Language</h3>
+            <p className="about-subheading">{ isGuestProfile ? guestInfo.primary_language : user.primary_language}</p>
+            <h3>Skills</h3>
+            <p className="about-subheading">{ isGuestProfile ? guestInfo.skills : user.skills}</p>
+          </div>
+            {/* About section */}
+            <div className="about-background-container">
+              <div className="about-container">
+                <h3>About me</h3>
+                <p className="about-subheading-white">{isGuestProfile ? guestInfo.about_me : user.about_me}</p>
+                {/* button logout/contact  */}
+                {routerId === user.id ? 
+                null
+                // (
+                  // <button
+                  //   onClick={() => {
+                  //     Cookies.remove("authToken");
+                  //     history.push("/login");
+                  //   }}
+                  // >
+                  //   {" "}
+                  //   Logout{" "}
+                  // </button>
+                // )
+                : (
+                  <div className="button-container">
+                    <button className="profile-button">Connect</button>
+                    <button className="profile-button" onClick={() => setIsPopupDisplayed(true)}>Contact</button>
+                  </div>
+                )}
+              </div>
+            </div>
         </div>
       )}
     </div>
