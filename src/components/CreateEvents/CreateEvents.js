@@ -19,6 +19,8 @@ const CreateEvents = () => {
       .catch((err) => console.log(err));
   };
 
+  const handleChange = () => {}
+
   return (
     <div>
       <form>
