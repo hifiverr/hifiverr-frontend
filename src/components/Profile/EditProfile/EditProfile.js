@@ -2,8 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 //import { useHistory } from "react-router-dom";
 import { AuthContext } from "../../../Context/AuthContext";
-import { user } from "../../../Context/AuthContext";
-import "./EditProfile.css"
+import "./EditProfile.css";
 
 const EditProfile = ({ routerId, setIsUserInEditMode }) => {
   //const history = useHistory();
@@ -20,7 +19,6 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
     skills: user.skills,
   });
   const [isImageDisplayed, setIsImageDisplayed] = React.useState(false);
-
 
   // React.useEffect(() => {
   //   setEditProfile(user);
@@ -41,37 +39,39 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
   };
 
   return (
-    <div className="edit-profile-wrapper" >
+    <div className="edit-profile-wrapper">
       <h1 className="edit-profile-header">Edit Profile</h1>
       <form onSubmit={handleSubmit}>
-    <div style={{ marginBottom: "50px" }}>
-      {isImageDisplayed ? (
-          <div className="signup-header">
-            <label htmlFor="image" className="profile_image_label">
-              Change Photo
-            </label>
-            <input
-              name="profile_image"
-              onChange={handleChange}
-              className="profile-image-input"
+        <div style={{ marginBottom: "50px" }}>
+          {isImageDisplayed ? (
+            <div className="signup-header">
+              <label htmlFor="image" className="profile_image_label">
+                Change Photo
+              </label>
+              <input
+                name="profile_image"
+                onChange={handleChange}
+                className="profile-image-input"
+              />
+              <button
+                onClick={() => setIsImageDisplayed(false)}
+                className="upload_image_button"
+              >
+                Confirm
+              </button>
+            </div>
+          ) : (
+            <img
+              src={editProfile.profile_image}
+              onClick={() => setIsImageDisplayed(true)}
+              className="create_profile_image"
             />
-            <button
-              onClick={() => setIsImageDisplayed(false)}
-              className="upload_image_button"
-            >
-              Confirm
-            </button>
-          </div>
-        ) : (
-          <img
-            src={editProfile.profile_image}
-            onClick={() => setIsImageDisplayed(true)}
-            className="create_profile_image"
-          />
-        )}
-    </div>
-        
-        <label className="labels_text" htmlFor="firstname">First name</label>
+          )}
+        </div>
+
+        <label className="labels_text" htmlFor="firstname">
+          First name
+        </label>
         <input
           className="edit-profile-input"
           id="firstname"
@@ -80,7 +80,9 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
           onChange={handleChange}
         />
         <br />
-        <label className="labels_text"  htmlFor="lastname">Last name</label>
+        <label className="labels_text" htmlFor="lastname">
+          Last name
+        </label>
         <input
           className="edit-profile-input"
           id="lastname"
@@ -89,7 +91,9 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
           onChange={handleChange}
         />
         <br />
-        <label className="labels_text" htmlFor="location">Location</label>
+        <label className="labels_text" htmlFor="location">
+          Location
+        </label>
         <input
           className="edit-profile-input"
           id="location"
@@ -98,7 +102,9 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
           onChange={handleChange}
         />
         <br />
-        <label className="labels_text"  htmlFor="primary_language">Language</label>
+        <label className="labels_text" htmlFor="primary_language">
+          Language
+        </label>
         <input
           className="edit-profile-input"
           id="primary_language"
@@ -107,7 +113,9 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
           onChange={handleChange}
         />
         <br />
-        <label className="labels_text"  htmlFor="skills">Skills</label>
+        <label className="labels_text" htmlFor="skills">
+          Skills
+        </label>
         <input
           className="edit-profile-input"
           id="skills"
@@ -116,7 +124,9 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
           onChange={handleChange}
         />
         <br />
-        <label className="labels_text"  htmlFor="about_me">About me</label>
+        <label className="labels_text" htmlFor="about_me">
+          About me
+        </label>
         <textarea
           className="aboutme-textarea"
           id="about_me"
@@ -126,12 +136,21 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
         />
         <br />
 
-          <div className="button-container">
-            <button className="edit-profile-button  edit-profile-button-cancel" type="button" onClick={() => setIsUserInEditMode(false)}>
-              Cancel
-            </button>
-            <button className="edit-profile-button  edit-profile-button-success" type="submit">Save</button>
-          </div>
+        <div className="button-container">
+          <button
+            className="edit-profile-button  edit-profile-button-cancel"
+            type="button"
+            onClick={() => setIsUserInEditMode(false)}
+          >
+            Cancel
+          </button>
+          <button
+            className="edit-profile-button  edit-profile-button-success"
+            type="submit"
+          >
+            Save
+          </button>
+        </div>
       </form>
     </div>
   );
