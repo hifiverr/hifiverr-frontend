@@ -19,8 +19,8 @@ const Profile = ({ match }) => {
   const [guestInfo, setGuestInfo] = useState({});
 
   const routerId = Number(match.params.id);
-  console.log("router id", routerId);
-  console.log("user id", user.id);
+  // console.log("router id", routerId);
+  // console.log("user id", user.id);
 
   useEffect(() => {
     console.log(user);

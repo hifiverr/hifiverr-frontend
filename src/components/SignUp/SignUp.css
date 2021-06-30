@@ -47,8 +47,9 @@
   border: 1px solid #3d3f43;
   border-radius: 10px;
   width: 250px;
-  height: 200px;
+  height: 100px;
   width: 90%;
+  padding: 10px;
 }
 
 .upload_image_button {

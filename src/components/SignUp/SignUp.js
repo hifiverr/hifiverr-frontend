@@ -108,7 +108,7 @@ const SignUp = () => {
         />
         <br />
         <p className="labels_text">About Me</p>
-        <input
+        <textarea
           name="about_me"
           value={state.about_me}
           onChange={handleChange}
