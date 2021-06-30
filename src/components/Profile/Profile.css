@@ -78,17 +78,17 @@
   margin: auto;
   border-radius: 4px;
   width: 120px;
-  height: 56px;
+  height: 36px;
   color: #00b16d;
   background: white;
   text-align: center;
-  line-height: 56px;
-  font-size: 25px;
+  line-height: 36px;
+  font-size: 20px;
   font-weight: 700;
   margin-top: 20px;
-  margin-bottom: 20px;
-  margin: 16px;
+  margin-bottom: 30px;
   border: none;
+  display: block;
 }
 
 .button-container {
