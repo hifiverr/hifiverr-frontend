@@ -14,7 +14,7 @@ const CreateEvents = () => {
   const [createdEvent, setCreatedEvent] = React.useState({
     community_id: Number(history.location.state.community_id),
     user_id: user.id,
-    profile_image: upload_image,
+    event_image: upload_image,
   });
 
   const handleSubmit = (event) => {
@@ -55,7 +55,7 @@ const CreateEvents = () => {
           </div>
         ) : (
           <img
-            src={createdEvent.profile_image}
+            src={createdEvent.event_image}
             onClick={() => setIsImageDisplayed(true)}
             className="upload_image_events"
           />

@@ -11,6 +11,10 @@ const CommunityDetails = ({ community, setCommunity, match }) => {
   const { user, setUser } = React.useContext(AuthContext);
   const [eventsByCommunity, setEventsByCommunity] = React.useState([]);
   const [postsByComunity, setPostsByComunity] = React.useState([]);
+  const [communityInfo, setCommunityInfo] = React.useState({
+    name: "",
+  });
+
   const [newPost, setNewPost] = React.useState({
     user_id: user.id,
     community_id: communityId,
@@ -19,6 +23,7 @@ const CommunityDetails = ({ community, setCommunity, match }) => {
   React.useEffect(() => {
     fetchEvents(communityId);
     fetchPosts(communityId);
+    fetchCommunityById(communityId);
   }, []);
 
   React.useEffect(() => {
@@ -36,6 +41,15 @@ const CommunityDetails = ({ community, setCommunity, match }) => {
     axios
       .get(`/posts?community_id=${communityId}`)
       .then((response) => setPostsByComunity(response.data))
+      .catch((err) => console.log(err));
+  };
+
+  const fetchCommunityById = (communityId) => {
+    axios
+      .get(`/communities/${communityId}`)
+      .then((response) => {
+        setCommunityInfo(response.data);
+      })
       .catch((err) => console.log(err));
   };
   const createPost = (event) => {
@@ -58,44 +72,50 @@ const CommunityDetails = ({ community, setCommunity, match }) => {
     setNewPost({ ...newPost, [name]: value });
   };
 
+  console.log(community);
+
   return (
     <div className="community-container">
       <Header />
-      {community
-        .filter((item) => item.id === communityId)
-        .map((item) => (
-          <h1>{item.name}</h1>
-        ))}
-      <h1 className="h1-community-events">Events</h1>
-      {eventsByCommunity.map((event) => {
-        return (
-          <div>
-            <img
-              className="community-details-cover"
-              src={event.event_image}
-              alt=""
-            />
-            <p className="h1-community-events">
-              {event.firstname} {event.lastname}
-            </p>
-            <p className="h1-community-events">{event.event_title}</p>
-            <p className="h1-community-events">{event.event_date}</p>
-            <a
-              href={event.link}
-              target="_blank"
-              className="h1-community-events"
-            >
-              Join
-            </a>
-          </div>
-        );
-      })}
+      <div className="community-details-name">
+        <h1>{communityInfo.name}</h1>
+      </div>
+
+      <h1 className="h1-community-post event-first-title">Events</h1>
+      <div className="community-details-events-flex-container">
+        {eventsByCommunity.map((event) => {
+          return (
+            <div className="community-details-event-flex-item">
+              <div className="events-img-container">
+                <img
+                  className="community-details-cover"
+                  src={event.event_image}
+                  alt=""
+                />
+              </div>
+              <p className="h1-community-events">
+                {event.firstname} {event.lastname}
+              </p>
+              <p className="h1-community-events">{event.event_title}</p>
+              <p className="h1-community-events">{event.event_date}</p>
+              <a
+                href={event.link}
+                target="_blank"
+                className="h1-community-events"
+              >
+                Join
+              </a>
+            </div>
+          );
+        })}
+      </div>
 
       <Link
         to={{
           pathname: "/add-event",
           state: { community_id: communityId },
         }}
+        className="add-event-button"
       >
         + Add event
       </Link>
@@ -110,21 +130,43 @@ const CommunityDetails = ({ community, setCommunity, match }) => {
             value={newPost.post_content}
             placeholder="Share your ideas..."
             className="text-area"
+            style={{
+              width: "94%",
+              height: "30px",
+              padding: "10px",
+              background: "#e5e5e5",
+              border: "none",
+            }}
           ></textarea>
-          <button type="submit" className="button-share">
+          <button type="submit" className="comment-button">
             Share
           </button>
         </form>
       </div>
 
+      <div
+        style={{
+          height: "40px",
+          marginBottom: "40px",
+        }}
+      />
+
       {postsByComunity.map((post) => {
         return (
-          <div>
-            <Link to={`/profile/${post.user_id}`}>
-              <img src={post.profile_image} alt="" />
-            </Link>
-            <p>{post.post_content}</p>
-            <button>Comment</button>
+          <div style={{ marginTop: "50px" }}>
+            <div className="community-post-container">
+              <Link to={`/profile/${post.user_id}`} className="profile-image">
+                <img
+                  className="community-post-image"
+                  src={post.profile_image}
+                  alt=""
+                />
+              </Link>
+              <div style={{ position: "relative", width: "100%" }}>
+                <p className="post-content">{post.post_content}</p>
+                <button className="comment-button">Comment</button>
+              </div>
+            </div>
           </div>
         );
       })}
