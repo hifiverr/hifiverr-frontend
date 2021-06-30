@@ -98,7 +98,7 @@ const EditProfile = ({ routerId, setIsUserInEditMode }) => {
           name="about_me"
           value={editProfile.about_me}
           onChange={handleChange}
-        />
+        ></textarea>
         <br />
 
         <button
