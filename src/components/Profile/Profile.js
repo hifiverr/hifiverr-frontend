@@ -47,11 +47,20 @@ const Profile = ({ match }) => {
       {isPopupDisplayed ? (
         <div className="popup-container">
           <div className="popup-content">
-            <button onClick={() => setIsPopupDisplayed(false)}>X</button>
-            <h2>
-              {guestInfo.firstname} {guestInfo.lastname}
-            </h2>
-            <h4>{guestInfo.email}</h4>
+            <div className="popup-button-container">
+              <button
+                className="button-popup-close"
+                onClick={() => setIsPopupDisplayed(false)}
+              >
+                X
+              </button>
+            </div>
+            <div className="popup-content-wrapper">
+              <h2>
+                {guestInfo.firstname} {guestInfo.lastname}
+              </h2>
+              <h4>{guestInfo.email}</h4>
+            </div>
           </div>
         </div>
       ) : null}
@@ -113,7 +122,7 @@ const Profile = ({ match }) => {
               {/* button logout/contact  */}
               {routerId === user.id ? (
                 <button
-                  className="profile-button"
+                  className="profile-button button-position-absolute"
                   onClick={() => {
                     Cookies.remove("authToken");
                     history.push("/login");
@@ -123,7 +132,7 @@ const Profile = ({ match }) => {
                   Logout{" "}
                 </button>
               ) : (
-                <div className="button-container">
+                <div className="button-container button-extra-properties">
                   <button className="profile-button">Connect</button>
                   <button
                     className="profile-button"
