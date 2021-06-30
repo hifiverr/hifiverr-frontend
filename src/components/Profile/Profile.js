@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { AuthContext } from "../../Context/AuthContext";
 import { useHistory } from "react-router-dom";
 import Cookies from "js-cookie";
-import EditProfile from "./EditProfile";
+import EditProfile from "./EditProfile/EditProfile";
 import edit_profile from "../assets/edit_profile.svg";
 import axios from "axios";
 import Header from "../Header/Header";
